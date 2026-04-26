@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venta de Carros CR | Grecia</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content container">
+        <p class="tag">Grecia, Costa Rica</p>
+        <h1>Vehículos usados de gama media-baja</h1>
+        <p>
+          Encontrá tu próximo carro con filtros rápidos por precio, tipo de vehículo,
+          año y combustible.
+        </p>
+        <a
+          class="btn btn--whatsapp"
+          href="https://wa.me/50600000000?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20veh%C3%ADculos%20disponibles."
+          target="_blank"
+          rel="noopener noreferrer"
+          >Escribir por WhatsApp</a
+        >
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="filters" aria-label="Filtros de vehículos">
+        <h2>Filtrar inventario</h2>
+        <div class="filters__grid">
+          <label>
+            Tipo
+            <select id="filter-type">
+              <option value="">Todos</option>
+              <option value="Sedán">Sedán</option>
+              <option value="Hatchback">Hatchback</option>
+              <option value="SUV">SUV</option>
+              <option value="Pickup">Pickup</option>
+            </select>
+          </label>
+
+          <label>
+            Combustible
+            <select id="filter-fuel">
+              <option value="">Todos</option>
+              <option value="Gasolina">Gasolina</option>
+              <option value="Diésel">Diésel</option>
+              <option value="Híbrido">Híbrido</option>
+            </select>
+          </label>
+
+          <label>
+            Precio máximo (USD)
+            <input id="filter-price" type="number" min="0" placeholder="Ej: 11000" />
+          </label>
+
+          <label>
+            Año mínimo
+            <input id="filter-year" type="number" min="1990" placeholder="Ej: 2014" />
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <div class="results-bar">
+          <h2>Vehículos disponibles</h2>
+          <p id="results-count"></p>
+        </div>
+        <div id="cars-grid" class="cars-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <p>© <span id="year"></span> Venta de Carros CR - Grecia.</p>
+        <a
+          href="https://wa.me/50600000000?text=Hola%2C%20me%20interesa%20uno%20de%20sus%20veh%C3%ADculos"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Contactar por WhatsApp</a
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
